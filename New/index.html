@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#07070a">
+  <meta name="description" content="Thirty seconds. Six heroes. One more round. Meet Pocket Quest, a bite-sized card-matching adventure coming to iOS for iPhone 17. Play the browser demo.">
+  <title>Pocket Quest — Small game. Big adventure. | Phép Thuật</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <a href="#" class="nav-brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>
+      </div>
+      <div>
+        <span class="brand-text">POCKET QUEST</span>
+        <span class="brand-tag">Phép Thuật</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#hero">Trang chủ</a></li>
+      <li><a href="#game-preview">Thử thách 30s</a></li>
+      <li><a href="#champions">6 Anh Hùng</a></li>
+      <li><a href="#features">Tính năng</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn-audio active" id="audio-toggle" title="Âm thanh (Bật/Tắt)" aria-label="Toggle sound">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+      </button>
+      <button class="nav-cta btn-open-game">
+        <span>▶ Chơi Thử Ngay</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Root Application Container -->
+  <div id="root">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
+        <div class="pq-eyebrow">
+          <span class="sparkle">✦</span>
+          <span>A LITTLE MATCH. A LITTLE MAGIC.</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Thirty seconds.<br>
+          Six heroes.<br>
+          <em>One more round.</em>
+        </h1>
+
+        <p class="hero-desc">
+          Chào mừng bạn đến với <b>Pocket Quest — Phép Thuật</b>! Thử thách lật thẻ cổ vật ghép cặp siêu tốc trong 30 giây. Luyện phản xạ và trí nhớ cùng 6 vị anh hùng huyền thoại.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Bản chơi thử trên trình duyệt</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Không cần cài đặt · Miễn phí</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Tối ưu cho iPhone 17 & Web</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="pq-button btn-open-game">
+            <span>✧ Chơi Full Màn Hình (Play Demo)</span>
+          </button>
+          <a href="#champions" class="pq-button secondary">
+            <span>Khám phá 6 Tướng ↓</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- iPhone 17 Mockup Frame (402 x 874 logical scale) -->
+      <div class="hero-mockup-wrapper" id="game-preview">
+        <div class="phone-ambient-glow"></div>
+        <div class="phone-mockup">
+          <div class="phone-island">
+            <div class="island-camera"></div>
+            <div class="island-sensor"></div>
+          </div>
+          <div class="phone-screen">
+            <!-- Embedded Mobile Game Frame -->
+            <div class="pq-game-intro" style="border:none; padding: 0 0 1rem; align-items:center; text-align:center;">
+              <div class="intro-brand">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffd166"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>
+                <span>POCKET QUEST</span>
+              </div>
+              <span class="pq-eyebrow" style="font-size:0.68rem; padding: 2px 8px;">A LITTLE MATCH. A LITTLE MAGIC.</span>
+              <h2 style="font-family:var(--font-serif); font-size:1.6rem; color:#fff; margin: 0.2rem 0;">Relic <em>Rush.</em></h2>
+              <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom: 0.4rem;">Thử thách 6 cặp cổ vật trong 30 giây.</p>
+              
+              <div class="pq-champion" style="width: 100%; padding: 0.9rem;">
+                <span class="pq-champion-orbit" aria-hidden="true" style="width:130px; height:130px;"></span>
+                <span class="pq-champion-star star-one" aria-hidden="true">✧</span>
+                <span class="pq-champion-star star-two" aria-hidden="true">✦</span>
+                <div class="pq-selected-hero" style="width:72px; height:85px; margin-bottom:0.3rem;"></div>
+                <span class="pq-champion-label" style="font-size:0.6rem;">YOUR CHAMPION</span>
+                <h3 id="pq-champion-name" style="font-size:1.1rem;">The Knight</h3>
+                <p id="pq-champion-line" style="font-size:0.75rem;">A small sword. Unshakeable courage.</p>
+              </div>
+            </div>
+
+            <div class="pq-game">
+              <div class="pq-game-top">
+                <span>01 / THE MEMORY CHALLENGE</span>
+                <span class="pq-phase" id="pq-phase">READY TO PLAY</span>
+              </div>
+              <div class="pq-hud">
+                <div class="pq-stat pq-stat-time">
+                  <small><span aria-hidden="true">◷</span> TIME</small>
+                  <span class="pq-time" id="pq-time">00:30</span>
+                </div>
+                <div class="pq-stat pq-stat-score">
+                  <small><span aria-hidden="true">✧</span> SCORE</small>
+                  <span id="pq-score">0</span>
+                </div>
+                <div class="pq-stat pq-stat-combo">
+                  <small><span aria-hidden="true">ϟ</span> COMBO</small>
+                  <div style="display:flex; align-items:baseline;">
+                    <span id="pq-combo">×1</span>
+                    <span class="pq-combo-dots" id="pq-combo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pq-timebar" aria-hidden="true">
+                <span id="pq-time-fill"></span>
+              </div>
+
+              <div class="pq-board-caption">
+                <span>FIND YOUR FAMILIAR FACES</span>
+                <span class="pq-pairs">
+                  <span id="pq-pair-count">0 / 6 pairs</span>
+                  <span id="pq-pair-marks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                </span>
+              </div>
+
+              <div class="pq-board-wrap">
+                <div class="pq-board" id="pq-board" role="group" aria-label="Twelve hero cards"></div>
+                <div class="pq-result" id="pq-result" hidden aria-live="polite">
+                  <span class="pq-eyebrow" id="pq-result-label">ROUND COMPLETE</span>
+                  <h3 id="pq-result-title">A little<br>victory.</h3>
+                  <div class="pq-result-score" id="pq-result-score">0</div>
+                  <p id="pq-result-detail"></p>
+                  <button type="button" class="pq-button" id="pq-again">One more round</button>
+                </div>
+              </div>
+
+              <p class="pq-game-note" id="pq-note" role="status" aria-live="polite">Chọn tướng bên dưới và bắt đầu thử thách!</p>
+
+              <div class="pq-heroes" role="group" aria-label="Choose your champion">
+                <button type="button" class="pq-hero" data-hero="knight" aria-pressed="true">Knight</button>
+                <button type="button" class="pq-hero" data-hero="ranger" aria-pressed="false">Ranger</button>
+                <button type="button" class="pq-hero" data-hero="bard" aria-pressed="false">Bard</button>
+                <button type="button" class="pq-hero" data-hero="paladin" aria-pressed="false">Paladin</button>
+                <button type="button" class="pq-hero" data-hero="mage" aria-pressed="false">Mage</button>
+                <button type="button" class="pq-hero" data-hero="rogue" aria-pressed="false">Rogue</button>
+              </div>
+
+              <button class="pq-button pq-action" type="button" id="pq-start">Start 30-second round</button>
+              <p class="pq-game-best" id="pq-best">Personal best: 0 · Saved on this device</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: 6 CHAMPIONS ROSTER -->
+    <section class="roster-section" id="champions">
+      <div class="section-header">
+        <div class="pq-eyebrow">
+          <span>✧</span><span>LỤC ĐẠI ANH HÙNG</span><span>✧</span>
+        </div>
+        <h2 class="section-title">Six Heroes. Bound by Magic.</h2>
+        <p class="section-desc">Mỗi anh hùng sở hữu một thánh vật cổ xưa. Nhấn vào thẻ để chọn vị tướng của bạn và bắt đầu trận chiến!</p>
+      </div>
+
+      <div class="roster-grid">
+        <!-- 1. The Knight -->
+        <div class="roster-card" data-hero="knight">
+          <div class="roster-img">
+            <svg viewBox="0 0 100 120"><circle cx="50" cy="50" r="42" fill="#1b152b" stroke="#f5b342" stroke-width="2.5"/><path d="M50 18 L75 35 V62 C75 78 50 88 50 88 C50 88 25 78 25 62 V35 Z" fill="#ffd166"/><circle cx="50" cy="51" r="5" fill="#f5b342"/></svg>
+          </div>
+          <h3 class="roster-name">The Knight</h3>
+          <span class="roster-title">Hiệp Sĩ Quả Cảm</span>
+          <p class="roster-lore">A small sword. Unshakeable courage. Đứng đầu chiến tuyến với thanh gươm ánh sáng bảo hộ công lý.</p>
+          <div class="roster-relic">
+            <span>🗡 Cổ vật:</span><b>Holy Blade</b>
+          </div>
+        </div>
+
+        <!-- 2. The Ranger -->
+        <div class="roster-card" data-hero="ranger">
+          <div class="roster-img">
+            <svg viewBox="0 0 100 120"><circle cx="50" cy="50" r="42" fill="#132422" stroke="#2ec4b6" stroke-width="2.5"/><path d="M50 20 C32 20 28 42 28 58 C28 74 38 82 50 82 C62 82 72 74 72 58 C72 42 68 20 50 20 Z" fill="#2ec4b6"/><circle cx="46" cy="46" r="3" fill="#a7ffeb"/><circle cx="54" cy="46" r="3" fill="#a7ffeb"/></svg>
+          </div>
+          <h3 class="roster-name">The Ranger</h3>
+          <span class="roster-title">Thiện Xạ Rừng Xanh</span>
+          <p class="roster-lore">Keen eye. Silent arrows in the mist. Người thợ săn bước đi không dấu vết giữa đại ngàn huyền bí.</p>
+          <div class="roster-relic">
+            <span>🏹 Cổ vật:</span><b>Wind Bow</b>
+          </div>
+        </div>
+
+        <!-- 3. The Bard -->
+        <div class="roster-card" data-hero="bard">
+          <div class="roster-img">
+            <svg viewBox="0 0 100 120"><circle cx="50" cy="50" r="42" fill="#20122e" stroke="#c77dff" stroke-width="2.5"/><path d="M26 50 C26 34 38 28 50 28 C64 28 74 34 74 50 C74 58 64 62 50 62 C36 62 26 58 26 50 Z" fill="#c77dff"/><path d="M56 26 Q72 12 78 6 Q74 22 66 28 Z" fill="#f5b342"/></svg>
+          </div>
+          <h3 class="roster-name">The Bard</h3>
+          <span class="roster-title">Thi Ca Huyền Bí</span>
+          <p class="roster-lore">A silver lute. Melodies that stir the ancients. Giai điệu cổ xưa làm xoa dịu những linh hồn lạc lối.</p>
+          <div class="roster-relic">
+            <span>🎵 Cổ vật:</span><b>Golden Lyre</b>
+          </div>
+        </div>
+
+        <!-- 4. The Paladin -->
+        <div class="roster-card" data-hero="paladin">
+          <div class="roster-img">
+            <svg viewBox="0 0 100 120"><circle cx="50" cy="50" r="42" fill="#2b2413" stroke="#ffd166" stroke-width="2.5"/><circle cx="50" cy="50" r="28" fill="none" stroke="#ffd166" stroke-width="3" stroke-dasharray="8 4"/><polygon points="50,22 53,32 63,32 55,38 58,48 50,42 42,48 45,38 37,32 47,32" fill="#ffffff"/></svg>
+          </div>
+          <h3 class="roster-name">The Paladin</h3>
+          <span class="roster-title">Hiệp Sĩ Ánh Sáng</span>
+          <p class="roster-lore">Sunlit shield. Unbreakable devotion. Chiếc khiên thánh rực rỡ mặt trời bảo vệ kẻ yếu trước bóng tối.</p>
+          <div class="roster-relic">
+            <span>🛡 Cổ vật:</span><b>Sun Aegis</b>
+          </div>
+        </div>
+
+        <!-- 5. The Mage -->
+        <div class="roster-card" data-hero="mage">
+          <div class="roster-img">
+            <svg viewBox="0 0 100 120"><circle cx="50" cy="50" r="42" fill="#0d2133" stroke="#48cae4" stroke-width="2.5"/><path d="M50 12 L72 65 H28 Z" fill="#48cae4"/><ellipse cx="50" cy="65" rx="30" ry="7" fill="#03045e"/><circle cx="50" cy="46" r="6" fill="#caf0f8"/></svg>
+          </div>
+          <h3 class="roster-name">The Mage</h3>
+          <span class="roster-title">Pháp Sư Tối Thượng</span>
+          <p class="roster-lore">Starlight orb. Mastery over arcane flames. Thấu suốt quy luật vũ trụ và các vòng xoay ma thuật vĩnh cửu.</p>
+          <div class="roster-relic">
+            <span>🔮 Cổ vật:</span><b>Arcane Sphere</b>
+          </div>
+        </div>
+
+        <!-- 6. The Rogue -->
+        <div class="roster-card" data-hero="rogue">
+          <div class="roster-img">
+            <svg viewBox="0 0 100 120"><circle cx="50" cy="50" r="42" fill="#280f19" stroke="#ff4d6d" stroke-width="2.5"/><path d="M28 36 C28 36 38 28 50 28 C62 28 72 36 72 36 L66 64 C66 74 50 82 50 82 C50 82 34 74 34 64 Z" fill="#ff4d6d"/><polygon points="38,44 46,46 44,49 36,46" fill="#fff"/><polygon points="62,44 54,46 56,49 64,46" fill="#fff"/></svg>
+          </div>
+          <h3 class="roster-name">The Rogue</h3>
+          <span class="roster-title">Sát Thủ Bóng Đêm</span>
+          <p class="roster-lore">Twin shadow daggers. Steps like a whisper. Xuất quỷ nhập thần, đòn tấn công kết liễu trong chớp mắt.</p>
+          <div class="roster-relic">
+            <span>🗡 Cổ vật:</span><b>Shadow Fang</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FEATURES -->
+    <section class="features-section" id="features">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrap">⏱</div>
+          <h4 class="feature-title">Ván đấu 30 Giây</h4>
+          <p class="feature-desc">Nhịp độ cực nhanh, thích hợp thư giãn ngắn trong giờ giải lao hay rèn luyện trí nhớ hàng ngày.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">⚡</div>
+          <h4 class="feature-title">Chuỗi Combo ×4</h4>
+          <p class="feature-desc">Ghép liên tiếp không sai lầm để nhân đôi, nhân ba điểm số và phá vỡ mọi kỷ lục cá nhân.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">✨</div>
+          <h4 class="feature-title">Âm Thanh Ma Thuật</h4>
+          <p class="feature-desc">Công nghệ Web Audio API tự tổng hợp âm thanh sống động mượt mà, không phụ thuộc kết nối mạng.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">🏆</div>
+          <h4 class="feature-title">Lưu Trữ Kỷ Lục</h4>
+          <p class="feature-desc">Điểm số cao nhất được tự động ghi nhận trên thiết bị của bạn. Thử thách bản thân qua từng hiệp đấu.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /#root -->
+
+  <!-- ========================================================= -->
+  <!-- FULLSCREEN MODAL DIALOG (EXACT MATCHING IDs FROM phepthuat.txt) -->
+  <!-- ========================================================= -->
+  <dialog id="pq-game" class="pq-dialog" aria-labelledby="pq-game-title" aria-describedby="pq-game-instructions" data-lenis-prevent>
+    <div class="game-card-surface">
+      <button class="pq-close" type="button" aria-label="Close game">×</button>
+      
+      <!-- Left: Intro & Champion -->
+      <div class="pq-game-intro">
+        <div class="intro-brand">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffd166"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>
+          <span style="letter-spacing: 0.08em; font-weight:700;">POCKET QUEST</span>
+        </div>
+        <span class="pq-eyebrow">A LITTLE MATCH. A LITTLE MAGIC.</span>
+        <h2 id="pq-game-title">Relic <em>Rush.</em></h2>
+        <p id="pq-game-instructions">A quick look. A little focus.<br>Find six pairs before the magic runs out.</p>
+        
+        <div class="pq-champion">
+          <span class="pq-champion-orbit" aria-hidden="true"></span>
+          <span class="pq-champion-star star-one" aria-hidden="true">✧</span>
+          <span class="pq-champion-star star-two" aria-hidden="true">✦</span>
+          <div class="pq-selected-hero" aria-label="Your champion: Knight"></div>
+          <span class="pq-champion-label">YOUR CHAMPION</span>
+          <h3 id="pq-champion-name">The Knight</h3>
+          <p id="pq-champion-line">A small sword. Unshakeable courage.</p>
+        </div>
+
+        <ol class="pq-rules">
+          <li><b>01</b><span>Take a peek</span></li>
+          <li><b>02</b><span>Find the pairs</span></li>
+          <li><b>03</b><span>Beat your best</span></li>
+        </ol>
+
+        <small><span class="pq-live-dot"></span> Free to play · Made for little breaks</small>
+      </div>
+
+      <!-- Right: Game Board & HUD -->
+      <div class="pq-game">
+        <div class="pq-game-top">
+          <span>01 / THE MEMORY CHALLENGE</span>
+          <span class="pq-phase" id="pq-phase">READY TO PLAY</span>
+        </div>
+
+        <div class="pq-hud">
+          <div class="pq-stat pq-stat-time">
+            <small><span aria-hidden="true">◷</span> TIME LEFT</small>
+            <span class="pq-time" id="pq-time">00:30</span>
+          </div>
+          <div class="pq-stat pq-stat-score">
+            <small><span aria-hidden="true">✧</span> SCORE</small>
+            <span id="pq-score">0</span>
+          </div>
+          <div class="pq-stat pq-stat-combo">
+            <small><span aria-hidden="true">ϟ</span> COMBO</small>
+            <div style="display:flex; align-items:baseline;">
+              <span id="pq-combo">×1</span>
+              <span class="pq-combo-dots" id="pq-combo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pq-timebar" aria-hidden="true">
+          <span id="pq-time-fill"></span>
+        </div>
+
+        <div class="pq-board-caption">
+          <span>FIND YOUR FAMILIAR FACES</span>
+          <span class="pq-pairs">
+            <span id="pq-pair-count">0 / 6 pairs</span>
+            <span id="pq-pair-marks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          </span>
+        </div>
+
+        <div class="pq-board-wrap">
+          <div class="pq-board" id="pq-board" role="group" aria-label="Twelve hero cards"></div>
+          <div class="pq-result" id="pq-result" hidden aria-live="polite">
+            <span class="pq-eyebrow" id="pq-result-label">ROUND COMPLETE</span>
+            <h3 id="pq-result-title">A little<br>victory.</h3>
+            <div class="pq-result-score" id="pq-result-score">0</div>
+            <p id="pq-result-detail"></p>
+            <button type="button" class="pq-button" id="pq-again">One more round</button>
+          </div>
+        </div>
+
+        <p class="pq-game-note" id="pq-note" role="status" aria-live="polite">Pick your champion. Then put your memory to the test.</p>
+
+        <div class="pq-heroes" role="group" aria-label="Choose your champion">
+          <button type="button" class="pq-hero" data-hero="knight" aria-pressed="true">Knight</button>
+          <button type="button" class="pq-hero" data-hero="ranger" aria-pressed="false">Ranger</button>
+          <button type="button" class="pq-hero" data-hero="bard" aria-pressed="false">Bard</button>
+          <button type="button" class="pq-hero" data-hero="paladin" aria-pressed="false">Paladin</button>
+          <button type="button" class="pq-hero" data-hero="mage" aria-pressed="false">Mage</button>
+          <button type="button" class="pq-hero" data-hero="rogue" aria-pressed="false">Rogue</button>
+        </div>
+
+        <button class="pq-button pq-action" type="button" id="pq-start">Start 30-second round</button>
+        <p class="pq-game-best" id="pq-best">Personal best: 0 · Saved on this device</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">POCKET QUEST ✦ PHÉP THUẬT</div>
+      <p class="footer-tagline">Small game. Big adventure. Made for quick pauses and bright minds.</p>
+      <p class="footer-credits">Original visual inspiration & concept: Pocket Quest / Relic Rush · Localhost Edition</p>
+    </div>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
+
